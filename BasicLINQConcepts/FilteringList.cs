@@ -1,20 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
-
 namespace BasicLINQConcepts
 {
-    class FilteringList
+    public static class FiltringList
     {
-        static void Main()
+        public static List<int> FilterGreaterThan(List<int> numbers, int threshold)
         {
-            List<int> numbers = new List<int> { 1, 5, 15, 20, 3, 10, 8, 25 };
-
-            List<int> filteredNumbers = numbers.Where(n => n > 10).ToList();
-
-            string result = string.Join(",", filteredNumbers);
-
-            Console.WriteLine("Числа больше 10:");
-            Console.WriteLine(result);
+            return numbers.Where(n => n > threshold).ToList();
         }
     }
 }
