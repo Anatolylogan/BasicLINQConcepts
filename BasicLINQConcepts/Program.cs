@@ -10,7 +10,7 @@ namespace BasicLINQConcepts
         {
             List<int> numbers = new List<int> { 1, 5, 15, 20, 3, 10, 8, 25 };
 
-            var filteredNumbers = FiltringList.FilterGreaterThan(numbers, 10);
+            var filteredNumbers = numbers.Where(n => n > 10).ToList();
 
             string result = string.Join(",", filteredNumbers);
             Console.WriteLine("Числа больше 10:");
@@ -18,7 +18,7 @@ namespace BasicLINQConcepts
 
             List<string> words = new List<string> { "яблоко", "банан", "груша", "ананас", "вишня" };
 
-            var sortedWords = SortingRows.SortAlphabetically(words);
+            var sortedWords = words.OrderBy(words => words).ToList();
 
             string result2 = string.Join(",", sortedWords);
             Console.WriteLine("Отсортированные строки: ");
