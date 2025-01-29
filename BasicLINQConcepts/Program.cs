@@ -13,18 +13,27 @@ namespace BasicLINQConcepts
             string result = string.Join(",", filteredNumbers);
             Console.WriteLine("Числа больше 10:");
             Console.WriteLine(result);
+            Console.WriteLine();
 
             List<string> words = new List<string> { "яблоко", "банан", "груша", "ананас", "вишня" };
             var sortedWords = words.OrderBy(words => words).ToList();
             string result2 = string.Join(",", sortedWords);
             Console.WriteLine("Отсортированные строки: ");
             Console.WriteLine(result2);
+            Console.WriteLine();
 
             List<int> numbers2 = new List<int> { 2, 3, 4, 5 };
             List<int> squaredNumbers = numbers2.Select(n => n * n).ToList();
             string result3 = string.Join(",", squaredNumbers);
             Console.WriteLine("Квадратные числа: ");
             Console.WriteLine(result3);
+            Console.WriteLine();
+
+            List<string> words2 = new List<string> { "яблоко", "ананас", "банан", "авокадо", "виноград" };
+            var count = words2.Count(word => word.StartsWith("а"));
+            Console.WriteLine("Количество строк начинаются с буквы <А>: ");
+            Console.WriteLine(count);
+            Console.WriteLine();
         }
     }
 }
