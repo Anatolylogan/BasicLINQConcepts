@@ -66,8 +66,15 @@ namespace BasicLINQConcepts
             Console.WriteLine(evenNumbers);
             Console.WriteLine("-----------------------------------------");
 
-
-
+            Console.WriteLine("_________________________________________");
+            List<int> numbers4 = new List<int> { 10, 20, 30, 40, 50, 5 };
+            var maxNumber = numbers4.Max();
+            var minNumber = numbers4.Min();
+            Console.WriteLine("Максимальное значение: ");
+            Console.WriteLine(maxNumber);
+            Console.WriteLine("Минимальное значение: ");
+            Console.WriteLine(minNumber);
+            Console.WriteLine("-----------------------------------------");
         }
     }
 }
