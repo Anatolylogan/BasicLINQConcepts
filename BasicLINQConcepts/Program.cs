@@ -58,6 +58,16 @@ namespace BasicLINQConcepts
             Console.WriteLine("Группа 30 лет и старше: ");
             Console.WriteLine(result5);
             Console.WriteLine("-----------------------------------------");
+
+            Console.WriteLine("_________________________________________");
+            List<int> numbers3 = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+            var evenNumbers = numbers3.Count(n => n % 2 == 0);
+            Console.WriteLine("Количество чётных чисел: ");
+            Console.WriteLine(evenNumbers);
+            Console.WriteLine("-----------------------------------------");
+
+
+
         }
     }
 }
