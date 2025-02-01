@@ -75,6 +75,15 @@ namespace BasicLINQConcepts
             Console.WriteLine("Минимальное значение: ");
             Console.WriteLine(minNumber);
             Console.WriteLine("-----------------------------------------");
+
+            Console.WriteLine("_________________________________________");
+            List<int> numbers5 = new List<int> { 1, 2, 2, 3, 4, 4, 5 };
+            var uniqueNumbers = numbers5.GroupBy(n => n).Where(g => g.Count() == 1).Select(g => g.Key).ToList();
+            string result6 = string.Join(",", uniqueNumbers);
+            Console.WriteLine("Уникальные элементы:");
+            Console.WriteLine(result6);
+            Console.WriteLine("-----------------------------------------");
+
         }
     }
 }
