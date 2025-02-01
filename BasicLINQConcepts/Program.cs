@@ -100,6 +100,13 @@ namespace BasicLINQConcepts
             Console.WriteLine(result8);
             Console.WriteLine("-----------------------------------------");
 
+            Console.WriteLine("_________________________________________");
+            List<int> numbers6 = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+            var evenNumbers1 = numbers6.MyWhere(n => n % 2 == 0);
+            string result9 = string.Join(",", evenNumbers1);
+            Console.WriteLine("Чётные чилса: ");
+            Console.WriteLine(result9);
+            Console.WriteLine("-----------------------------------------");
         }
     }
 }
