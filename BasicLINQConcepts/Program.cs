@@ -84,6 +84,16 @@ namespace BasicLINQConcepts
             Console.WriteLine(result6);
             Console.WriteLine("-----------------------------------------");
 
+            Console.WriteLine("_________________________________________");
+            List<string> list1 = new List<string> { "яблоко", "груша", "банан" };
+            List<string> list2 = new List<string> { "банан", "вишня", "яблоко" };
+            var mergedList = list1.Union(list2).ToList();
+            string result7 = string.Join(",", mergedList);
+            Console.WriteLine("Cписок содержащий строки из обоих списков без повторений:");
+            Console.WriteLine(result7);
+            Console.WriteLine("-----------------------------------------");
+
+
         }
     }
 }
