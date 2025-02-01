@@ -93,6 +93,12 @@ namespace BasicLINQConcepts
             Console.WriteLine(result7);
             Console.WriteLine("-----------------------------------------");
 
+            Console.WriteLine("_________________________________________");
+            List<string> words3 = new List<string> { "яблоко", "банан", "груша" };
+            var wordCounts = words3.Select(word => $"{{ \"{word}\": {word.Length} }}").ToList();
+            string result8 = string.Join(",", wordCounts);
+            Console.WriteLine(result8);
+            Console.WriteLine("-----------------------------------------");
 
         }
     }
